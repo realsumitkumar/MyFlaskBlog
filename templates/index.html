@@ -1,0 +1,75 @@
+{% extends 'template.html' %}
+{% block content %}
+<style>
+    .carousel-item{
+    height:400px
+    }
+}
+}
+
+
+
+
+</style>
+
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://source.unsplash.com/random/?computer,code" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/random/?blog,blog" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/random/?blog,blogs" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="site-heading mt-4 md-4">Recent Posts:</h1>
+            {% for post in posts %}
+            <div class="post-preview">
+                <a href="post/{{post.slug}}">
+                    <h3 class="post-title">
+                        {{post.title}}
+                    </h3>
+                    <h6 class="post-subtitle">
+                        {{post.tagline}}
+                    </h6>
+                </a>{{post.content[0:370]}}...
+                <p class="post-meta">Posted by
+                    <a href="#">{{params['blog_name']}}</a>
+                    on {{post.date}}</p>
+            </div>
+            <hr>
+            {% endfor %}
+
+            <!-- Pager -->
+            <div class="clearfix">
+                {% if prev %}
+                <a class="btn btn-primary float-start" href="{{prev}}">&larr;Previous Post</a>
+                {% endif %}
+                {% if next %}
+                <a class="btn btn-primary float-end" href="{{next}}">Next Post &rarr;</a>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

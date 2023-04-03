@@ -1,0 +1,85 @@
+{% extends 'template.html' %}
+{% block content %}
+
+<!--Section: Contact v.2-->
+
+<style>
+    .container {
+    max-width: 700px;
+    margin-right:auto;
+}
+
+</style>
+
+<section>
+    <div class="container">
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold  my-4">Contact us</h2>
+
+        <div class="row" id="row">
+
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="/contact" method="POST" novalidate>
+
+                    <!--Grid row-->
+                    <div class="row my-4">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <label for="name" class="">Full name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control" required>
+                                <label for="email" class="">Email</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="phone" name="phone" class="form-control" required>
+                                <label for="phone" class="">Phone Number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row my-4">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2"
+                                      class="form-control md-textarea" required></textarea>
+                                <label for="message">Your message</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Section: Contact v.2-->
+
+
+{% endblock content %}

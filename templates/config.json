@@ -1,0 +1,20 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/codingthunder",
+    "prod_uri": "mysql://root:@localhost/codingthunder",
+    "fb_url": "https://www.facebook.com/codingthunder",
+    "gh_url": "https://www.github.com/codingthunder",
+    "tw_url": "https://www.twitter.com/codingthunder",
+    "blog_name": "Sumit's Blog",
+    "tag_line": " Blog made by Sumit ",
+    "gmail-user": "sumitkumarusit@gmail.com",
+    "gmail-password": "syfoeeennqvadqsd",
+    "about-me": "Hi, I am Sumit Kumar, I am a full stack web developer and data analyst/scientist, I bring a unique blend of skills to design and develop intuitive, data-driven web applications. I am proficient in HTML, CSS, JavaScript, Python, and SQL, and experienced in popular frameworks like Django. With expertise in data analysis and visualization tools like Tableau and Excel, I can collect, clean, and analyze large data sets to extract meaningful insights for informed decision-making. My passion for technology and problem-solving drives me to stay current, learn new skills, and deliver high-quality solutions. ",
+    "no_of_posts": 4,
+    "login_image": "login.svg",
+    "admin_user": "admin",
+    "admin_password": "1234",
+    "upload_location": "C:\\Users\\Admin\\PycharmProjects\\Flask-tut\\static"
+  }
+}
